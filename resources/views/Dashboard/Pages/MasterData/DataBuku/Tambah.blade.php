@@ -90,7 +90,7 @@
                             <option value="biografi">Biografi</option>
                             <option value="pendidikan">Pendidikan</option>
                             <option value="pendidikan">Dongeng </option>
-                            <option value="pendidikan">agama </option>
+                            <option value="pendidikan">Agama </option>
                         </select>
                         @error('kategori')
                             <div class="alert alert-danger text-red-500" role="alert">
