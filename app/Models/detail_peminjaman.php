@@ -15,4 +15,9 @@ class detail_peminjaman extends Model
     {
         return $this->belongsTo(Borrowing::class, 'id_peminjaman', 'id');
     }
+
+    public function book()
+    {
+        return $this->belongsTo(Book::class, 'kode_buku', 'kode_buku');
+    }
 }

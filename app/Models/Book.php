@@ -19,4 +19,13 @@ class Book extends Model
 
     protected $table = "books";
 
+    public function detailPeminjaman()
+    {
+        return $this->hasMany(detail_peminjaman::class, 'kode_buku', 'kode_buku');
+    }
+
+    public function detailPengembalian()
+    {
+        return $this->hasMany(detail_pengembalian::class, 'kode_buku', 'kode_buku');
+    }
 }

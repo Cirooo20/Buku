@@ -45,7 +45,7 @@ class DataSiswa extends Controller
 
         $siswa = new Students();
         $siswa->fill($request->all());
-        $siswa->save();
+        $siswa->save(); 
 
         return redirect('/datasiswa');
     }

@@ -3,8 +3,8 @@
 @section('konten')
     <div class="container mx-auto px-4 py-8">
         <div class="mb-8">
-            <h1 class="text-3xl font-bold mb-2 text-white">Tambah Peminjaman</h1>
-            <p class="text-gray-400">Transaksi > Tambah Peminjaman</p>
+            <h1 class="text-3xl font-bold mb-2 text-white">Tambah Pengembalian</h1>
+            <p class="text-gray-400">Transaksi > Tambah Pengembalian</p>
         </div>
 
         <div class="bg-gray-800 rounded-lg shadow-lg p-6">
@@ -22,11 +22,11 @@
                         @enderror
                     </div>
                     <div class="mb-3">
-                        <label for="tanggal_pinjam" class="block text-sm font-medium text-white">Tanggal Pinjam</label>
-                        <input type="date" name="tanggal_pinjam" id="tanggal_pinjam"
-                            class="form-input border-0 bg-body-secondary w-full text-black focus:outline-none @error('tanggal_pinjam') border-red-500 @enderror"
-                            value="{{ old('tanggal_pinjam', date('Y-m-d')) }}">
-                        @error('tanggal_pinjam')
+                        <label for="tanggal_kembali" class="block text-sm font-medium text-white">Tanggal Pinjam</label>
+                        <input type="date" name="tanggal_kembali" id="tanggal_kembali"
+                            class="form-input border-0 bg-body-secondary w-full text-black focus:outline-none @error('tanggal_kembali') border-red-500 @enderror"
+                            value="{{ old('tanggal_kembali', date('Y-m-d')) }}">
+                        @error('tanggal_kembali')
                             <p class="text-red-500 text-xs mt-1">{{ $message }}</p>
                         @enderror
                     </div>
@@ -38,15 +38,6 @@
                         <input type="text" name="nama" id="nama"
                             class="form-input w-full text-black focus:outline-none @error('nama') border-red-500 @enderror" readonly value="{{ old('nama') }}">
                         @error('nama')
-                            <p class="text-red-500 text-xs mt-1">{{ $message }}</p>
-                        @enderror
-                    </div>
-                    <div class="mb-3">
-                        <label for="tanggal_kembali" class="block text-sm font-medium text-white">Tanggal Kembali</label>
-                        <input type="date" name="tanggal_kembali" id="tanggal_kembali"
-                            class="form-input border-0 bg-body-secondary w-full text-black focus:outline-none @error('tanggal_kembali') border-red-500 @enderror"
-                            value="{{ old('tanggal_kembali', date('Y-m-d', strtotime('+7 days'))) }}">
-                        @error('tanggal_kembali')
                             <p class="text-red-500 text-xs mt-1">{{ $message }}</p>
                         @enderror
                     </div>
@@ -123,10 +114,9 @@
         </div>
     </div>
 
-    
-    <script src="/js/ApiPeminjaman.js"></script>
+        <script src="/js/ApiPengemablian.js"></script>
 @endsection
 
 @push('scripts')
-<script src="{{ asset('JS/ApiPeminjaman.js') }}"></script>
+<script src="{{ asset('JS/ApiPengemablian.js') }}"></script>
 @endpush

@@ -15,4 +15,9 @@ class borrowing extends Model
     {
         return $this->hasMany(detail_peminjaman::class, 'id_peminjaman', 'id');
     }
+
+    public function returned()
+    {
+        return $this->hasOne(returned::class, 'id_peminjaman', 'id');
+    }
 }
